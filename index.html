@@ -1,60 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Karel Mahiet</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaQueries.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaQueries.css" />
+  </head>
+  <body>
     <nav id="desktop-nav">
-        <div class="logo">Karel Mahiet</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#About">À propos</a></li>
-                <li><a href="#Experience">Expérience</a></li>
-                <li><a href="#Projects">Projets</a></li>
-                <li><a href="#Contact">Me rejoindre</a></li>
-            </ul>
-        </div>
+      <div class="logo">Karel Mahiet</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#experience">Expérience</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Me rejoindre</a></li>
+        </ul>
+      </div>
     </nav>
     <nav id="hamburger-nav">
-        <div class="logo">Karel Mahiet</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#About" onclick="toggleMenu()">À propos</a></li>
-                <li><a href="#Experience" onclick="toggleMenu()">Expérience</a></li>
-                <li><a href="#Projects" onclick="toggleMenu()">Projets</a></li>
-                <li><a href="#Contact" onclick="toggleMenu()">Me rejoindre</a></li>
-            </div>
+      <div class="logo">Karel Mahiet</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+        <div class="menu-links">
+          <li><a href="#About" onclick="toggleMenu()">À propos</a></li>
+          <li><a href="#Experience" onclick="toggleMenu()">Expérience</a></li>
+          <li><a href="#Projects" onclick="toggleMenu()">Projets</a></li>
+          <li><a href="#Contact" onclick="toggleMenu()">Me rejoindre</a></li>
+        </div>
+      </div>
     </nav>
     <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/proMoi.jpg" alt="Karel ProPic">
+      <div class="section__pic-container">
+        <img src="./assets/moiProCercle.png" alt="Karel ProPic" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Bonjour, je m'appel</p>
+        <h1 class="title">Karel Mahiet</h1>
+        <p class="section__text__p2">Étudiant à l'Université de Sherbrooke</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/CVKarelMahiet.pdf')"
+          >
+            Télécharger mon CV!
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#Contact'">
+            Me contacter
+          </button>
         </div>
-        <div class="section__text">
-            <p class="section__text__p1">Bonjour, je m'appel</p>
-            <h1 class="title">Karel Mahiet</h1>
-            <p class="section__text__p2">Étudiant à l'Université de Sherbrooke</p>
-            <div class="btn-container">
-                <button class="btn bnt-color-2" onclick="window.open('./assets/CVKarelMahiet.pdf')">
-                    Télécharger mon CV!</button>
-                <button class="btn bnt-color-2" onclick="location.href='./#Contact'">
-                    Me contacter</button>
-            </div>
-            <div id="socials-container">
-                <img src="/assets/linkedin.png" alt="Mon profile LinkedIn"
-                class="icon" onclick="location.href='https://www.linkedin.com/in/karel-mahiet-68562b264/'">
-            </div>
+        <div id="socials-container">
+          <img
+            src="/assets/linkedin.png"
+            alt="Mon profil LinkedIn"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/karel-mahiet-68562b264/'"
+          />
+          <img
+            src="/assets/github.png"
+            alt="Mon profil GitHub"
+            class="icon"
+            onclick="location.href='https://github.com/karelmahiet'"
+          />
         </div>
+      </div>
     </section>
+    <section id="about">
+      <p class="section__text__p1">Apprenez à me connaitre!</p>
+      <h1 class="title">À propos de moi</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/nyc.JPEG" alt="Photo" class="about-pic" />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="experience icon"
+                class="icon"
+              />
+              <h3>Expérience</h3>
+              <p>
+                Divers stages dans <br />
+                le domaine de l'informatique <br />
+                (développeur, TI)
+              </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="education icon"
+                class="icon"
+              />
+              <h3>Éducation</h3>
+              <p>
+                DEC Techniques de l'informatique <br />
+                (2021-2024)<br />
+                Baccalauréat en génie informatique <br />
+                (2024-présent)
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              <br />Curieux et motivé, je vise à contribuer au progrès
+              technologique <br />
+              tout en partageant mes connaissances pour inspirer les autres.
+              <br />
+              Après avoir obtenu un DEC en techniques de l'informatique au Cégep
+              de Valleyfield, <br />
+              je poursuis ma passion pour l'innovation technologique à
+              l'Université de Sherbrooke. <br />
+              Sur un niveau plus personnel, je pratique le ski alpin depuis 15
+              ans et <br />
+              l'haltérophilie depuis plus de 2 ans, des activités qui m'ont
+              appris <br />
+              la persévérence et la discipline. <br />
+              En parallèle, je m'implique dans ma communauté à travers diverses
+              initiatives bénévoles. <br />
+              J'ai hâte de continuer à nourrir ma curiosité et de faire votre
+              connaissance!
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explorez mes</p>
+      <h1 class="title">Expériences</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Cégep de Valleyfield</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>DEC</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>DEC</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>DEC, Stage</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TI</h3>
+                  <p>DEC, Stage</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                  <p>DEC</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Swift</h3>
+                  <p>DEC</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Université de Sherbrooke</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Robotique</h3>
+                  <p>BAC</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                  <p>BAC</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>AutoCAD</h3>
+                  <p>BAC</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SolidWorks</h3>
+                  <p>BAC</p>
+                </div>
+              </article>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects"></section>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
