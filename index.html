@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karel Mahiet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Karel Mahiet</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#About">À propos</a></li>
+                <li><a href="#Experience">Expérience</a></li>
+                <li><a href="#Projects">Projets</a></li>
+                <li><a href="#Contact">Me rejoindre</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Karel Mahiet</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#About" onclick="toggleMenu()">À propos</a></li>
+                <li><a href="#Experience" onclick="toggleMenu()">Expérience</a></li>
+                <li><a href="#Projects" onclick="toggleMenu()">Projets</a></li>
+                <li><a href="#Contact" onclick="toggleMenu()">Me rejoindre</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/proMoi.jpg" alt="Karel ProPic">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Bonjour, je m'appel</p>
+            <h1 class="title">Karel Mahiet</h1>
+            <p class="section__text__p2">Étudiant à l'Université de Sherbrooke</p>
+            <div class="btn-container">
+                <button class="btn bnt-color-2" onclick="window.open('./assets/CVKarelMahiet.pdf')">
+                    Télécharger mon CV!</button>
+                <button class="btn bnt-color-2" onclick="location.href='./#Contact'">
+                    Me contacter</button>
+            </div>
+            <div id="socials-container">
+                <img src="/assets/linkedin.png" alt="Mon profile LinkedIn"
+                class="icon" onclick="location.href='https://www.linkedin.com/in/karel-mahiet-68562b264/'">
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
