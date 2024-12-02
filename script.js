@@ -5,38 +5,9 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-const video = document.getElementById("myVideo");
-const playFullscreenButton = document.getElementById("playFullscreen");
-
-playFullscreenButton.addEventListener("click", () => {
-  video.style.display = "block";
-  video.play();
-  if (video.requestFullscreen) {
-    video.requestFullscreen();
-  } else if (video.webkitRequestFullscreen) {
-    video.webkitRequestFullscreen();
-  } else if (video.msRequestFullscreen) {
-    video.msRequestFullscreen();
-  }
-});
-
-document.addEventListener("fullscreenchange", () => {
-  if (!document.fullscreenElement) {
-    video.pause();
-    video.style.display = "none";
-  }
-});
-
-document.addEventListener("webkitfullscreenchange", () => {
-  if (!document.webkitFullscreenElement) {
-    video.pause();
-    video.style.display = "none";
-  }
-});
-
-document.addEventListener("msfullscreenchange", () => {
-  if (!document.msFullscreenElement) {
-    video.pause();
-    video.style.display = "none";
-  }
-});
+function playFullScreen() {
+  const video = document.getElementById('myVideo');
+  video.style.display = 'block'; // Rendre visible la vidéo
+  video.requestFullscreen(); // Activer le mode plein écran
+  video.play(); // Lire la vidéo
+}
