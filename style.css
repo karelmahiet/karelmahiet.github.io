@@ -313,6 +313,12 @@ section {
   margin: auto 0;
 }
 
+.text-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 /* experience section */
 
 #experience {
