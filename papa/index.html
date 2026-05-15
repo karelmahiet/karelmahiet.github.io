@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonne Fête Papa !</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-text">
+        <h1>Appuie pour ouvrir</h1>
+    </div>
+    <div class="card-container">
+
+        <div id="heart-container"></div>
+        <div class="card">
+
+            <div class="front">
+                <h1>Au meilleur des pères</h1>
+                <p>du monde entier</p>
+                <img class="photo-papa" src="../papa/IMG_1904.JPEG" alt="papidou">
+            </div>
+            <div class="back">
+                <h2>Bonne fête papa, je t'aime de ton mon coeur</h2>
+                <p>Merci pour tout ce que tu fais au quotidien, je ne pourrais pas demander mieux. Oublie pas que c'est toi le meilleur.</p>
+                <p class="signature">- Karel</p>
+                <img class="photo-papaB" src="../papa/IMG_5346.JPEG" alt="chiots">
+                <img class="photo-papaB" src="../papa/IMG_46911.GIF" alt="chiotsMechant">
+            </div>
+        </div>
+    </div>
+    <audio id="maMusique" loop>
+    <source src="../papa/musique.mp3" type="audio/mpeg">
+    <script>
+        const card = document.querySelector('.card');
+        const heartContainer = document.getElementById('heart-container');
+        const musique = document.getElementById('maMusique');
+
+        card.addEventListener('click', function() {
+            const isOpen = this.classList.toggle('open');
+            
+            if (isOpen) {
+                musique.play().catch(e => console.log("Audio bloqué"));
+                createHearts();
+            }
+        });
+
+        function createHearts() {
+            for (let i = 0; i < 50; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = -10 + '%';
+                heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+                heartContainer.appendChild(heart);
+                setTimeout(() => { heart.remove(); }, 5000);
+            }
+        }
+    </script>
+</audio>
+</body>
+</html>
